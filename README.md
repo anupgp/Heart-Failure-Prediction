@@ -1,19 +1,7 @@
 # Data Science Team 2 
 
 # 🫀 Heart Disease Prediction Model
-
 This project uses a combined heart disease dataset to develop a predictive model for diagnosing the presence of heart disease based on clinical features. A Random Forest Classifier is trained and evaluated for performance using accuracy, precision, recall, F1, Confustion Matric. The results are further illustrated with data visualizations and analysis, supporting explainability and clinical insight.
-
-# Data Science Team 2 
-
-# 🫀 Heart Disease Prediction Model
-This project uses a combined heart disease dataset to develop a predictive model for diagnosing the presence of heart disease based on clinical features. A Random Forest Classifier is trained and evaluated for performance using accuracy, precision, recall, F1, Confustion Matric. The results are further illustrated with data visualizations and analysis, supporting explainability and clinical insight.
-
-## ✅ Purpose & Overview
-The objective of this project is to:
-- Develop a machine learning model for predicting heart disease.
-- Identify significant predictors contributing to heart disease.
-- Provide intuitive visualizations through tools like Plotly Dash to support model interpretability for both technical and non-technical audiences.
 
 ## ✅ Purpose & Overview
 The objective of this project is to:
@@ -55,7 +43,7 @@ Citation: *fedesoriano*, [Heart Failure Prediction Dataset (Kaggle)](https://www
 | HeartDisease      | Target variable (1 = Heart Disease, 0 = Normal) 
 
 ## Exploratory Data Analysis 
-=======
+
 A cleaned dataset combining five heart-related datasets serves as the input, and Random Forest Plot regression was chosen for data modeling. 
 
 ## Dataset Overview 
@@ -72,22 +60,6 @@ The final dataset contains 918 unique patient records drawn from five publicly a
 Source: [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/machine-learning-databases/heart-disease/)  
 Citation: *fedesoriano*, [Heart Failure Prediction Dataset (Kaggle)](https://www.kaggle.com/fedesoriano/heart-failure-prediction)
 
-
-## 📊 Key Variables & Feature Descriptions
-| Column Name       | Description                                                                                  |
-|-------------------|----------------------------------------------------------------------------------------------|
-| Age               | Age of the patient (years)                                                                   |
-| Sex               | Gender (1 = Male, 0 = Female)                                                                |
-| ChestPainType     | One-hot encoded; Includes TA, ATA, NAP, and ASY (first category dropped)                     |
-| RestingBP         | Resting blood pressure (mm Hg)                                                               |
-| Cholesterol       | Serum cholesterol (mg/dl)                                                                    |
-| FastingBS         | Fasting blood sugar > 120 mg/dl (1 = Yes, 0 = No)                                            |
-| RestingECG        | Resting ECG results: 0 = Normal, 1 = ST Abnormality, 2 = LVH                                 |
-| MaxHR             | Maximum heart rate achieved                                                                  |
-| ExerciseAngina    | Exercise-induced angina (1 = Yes, 0 = No)                                                    |
-| Oldpeak           | ST depression induced by exercise compared to rest                                           |
-| ST_Slope          | Slope of the ST segment: 0 = Up, 1 = Flat, 2 = Down                                          |
-| HeartDisease      | Target variable (1 = Heart Disease, 0 = Normal) 
 
 ## Exploratory Data Analysis 
 
@@ -161,13 +133,8 @@ The model selection process follows these steps:
 5. **Hyperparameter Tuning**: Performed using `GridSearchCV` with 5-fold cross-validation.
 
 
-### Optimal Parameters Used 
 
 
-## 📈 Model Evaluation
-
-
-## 🔍 Exploratory Data Analysis
 
 Key trends and insights:
 - **Age**: Normally distributed across the population.  
@@ -176,7 +143,6 @@ Key trends and insights:
 - **Feature Correlation**: Oldpeak and ST_Slope show notable associations with heart disease.
 
 ## 🧠 Feature Importance
-
 
 Planned visualizations:
 - Bar chart of absolute logistic regression coefficients  
