@@ -1,14 +1,17 @@
 
-# Heart Disease Prediction Model
+# Data Science Team 2 
+
+# 🫀 Heart Disease Prediction Model
 This project uses a combined heart disease dataset to develop a predictive model for diagnosing the presence of heart disease based on clinical features. A Random Forest Classifier is trained and evaluated for performance using accuracy, precision, recall, F1, Confustion Matric. The results are further illustrated with data visualizations and analysis, supporting explainability and clinical insight.
 
-## Purpose & Overview
-The objective of this project is to:
--Develop a machine learning model for predicting heart disease.
--Identify the most significant predictors contributing to heart disease.
--Provide intuitive visualizations through tools like Plotly Dash to support model interpretability for both technical and non-technical audiences.
 
-A cleaned dataset combining five heart-related datasets serves as the input, and logistic regression was chosen for its simplicity, interpretability, and robustness in binary classification tasks.
+## ✅ Purpose & Overview
+The objective of this project is to:
+- Develop a machine learning model for predicting heart disease.
+- Identify significant predictors contributing to heart disease.
+- Provide intuitive visualizations through tools like Plotly Dash to support model interpretability for both technical and non-technical audiences.
+
+A cleaned dataset combining five heart-related datasets serves as the input, and Random Forest Plot regression was chosen for data modeling. 
 
 ## Dataset Overview 
 The final dataset contains 918 unique patient records drawn from five publicly available sources:
@@ -25,7 +28,7 @@ Source: [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/machine
 Citation: *fedesoriano*, [Heart Failure Prediction Dataset (Kaggle)](https://www.kaggle.com/fedesoriano/heart-failure-prediction)
 
 
-## Key Variables & Feature Descriptions
+## 📊 Key Variables & Feature Descriptions
 | Column Name       | Description                                                                                  |
 |-------------------|----------------------------------------------------------------------------------------------|
 | Age               | Age of the patient (years)                                                                   |
@@ -41,9 +44,32 @@ Citation: *fedesoriano*, [Heart Failure Prediction Dataset (Kaggle)](https://www
 | ST_Slope          | Slope of the ST segment: 0 = Up, 1 = Flat, 2 = Down                                          |
 | HeartDisease      | Target variable (1 = Heart Disease, 0 = Normal) 
 
+## Exploratory Data Analysis 
+
+![Heart Disease Age Distribution](/Users/khrystynaplatko/Desktop/Heart-Failure-Prediction/Figures/Screenshot%202025-07-24%20at%207.13.59%20PM.png)
+
+This histogram illustrates the age distribution of individuals diagnosed with and without heart disease. The data is categorized into two groups: those with heart disease (indicated in blue) and those without (indicated in red).
+
+1. **Age Peaks**:
+   - Individuals with heart disease primarily fall within the age range of around 60 years, showcasing a peak in this demographic.
+   - Conversely, individuals without heart disease tend to cluster around the 50-year mark.
+
+2. **Age Spread**:
+   - The distribution for those with heart disease is broader, extending into the older age groups more prominently than those without.
+   - The distribution for those without heart disease is slightly more compact, with fewer older individuals.
+
+3. **Comparative Density**:
+   - Higher density of older individuals (between 50 to 70 years) is observed in the blue group (with heart disease).
+   - Younger individuals (under 50 years) are more prevalent in the red group (without heart disease).
+
+4. **Implications**:
+   - The data suggests a correlation between age and the prevalence of heart disease, highlighting that the risk increases with age.
+
+This visualization aids in understanding the relationship between age and the occurrence of heart disease, suggesting the importance of age as a factor in medical assessments and preventive strategies.
 
 
-## Model Development
+
+## 🧪 Model Development
 
 The model selection process follows these steps: 
 
@@ -57,7 +83,7 @@ The model selection process follows these steps:
 ### Optimal Parameters Used 
 
 
-## Model Evaluation
+## 📈 Model Evaluation
 
 
 - **Confusion Matrix**:
@@ -69,11 +95,13 @@ The model selection process follows these steps:
 
 - **Classification Report**:
 
-| Class | Precision | Recall | F1-Score | Support |
-|-------|-----------|--------|----------|---------|
-|   0   |   0.89    |  0.83  |   0.86   |   82    |
-|   1   |   0.87    |  0.92  |   0.90   |  102    |
-| Avg   |   0.88    |  0.88  |   0.88   |  184    |
+| Metric    | Value |
+|-----------|-------|
+| Accuracy  | 0.875 |
+| Precision | 0.896 |
+| Recall    | 0.888 |
+| F1 Score  | 0.892 |
+| ROC AUC   | 0.936 |
 
 ## 🔍 Exploratory Data Analysis
 
