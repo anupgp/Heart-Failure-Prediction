@@ -1,86 +1,152 @@
-# Heart-Failure-Prediction
-This project aims to analyze the Heart Failure Dataset to classify the most significant disease predictors.
+# Data Science Team 2 
 
-REVIEWING THE DATASET 
-1. What are the key variables and attributes in your dataset?
-The dataset contains demographic and clinical variables related to heart health, including:  
-
-Age: age of the patient [years]
-Sex: sex of the patient [M: Male, F: Female]
-ChestPainType: chest pain type [TA: Typical Angina, ATA: Atypical Angina, NAP: Non-Anginal Pain, ASY: Asymptomatic]
-    TA: Typical Angina — chest pain with characteristic symptoms
-    ATA: Atypical Angina — chest pain with some but not all typical features
-    NAP: Non-Anginal Pain — chest pain not related to angina
-    ASY: Asymptomatic — no chest pain but other signs of risk
-RestingBP: resting blood pressure [mm Hg]
-    Elevated blood pressure is a risk factor for heart disease.
-Cholesterol: serum cholesterol [mm/dl]
-    Higher cholesterol levels are associated with increased cardiovascular risk.
-FastingBS: fasting blood sugar [1: if FastingBS > 120 mg/dl, 0: otherwise]
-    Elevated blood sugar is linked to diabetes and heart disease risk.
-RestingECG: resting electrocardiogram results [Normal: Normal, ST: having ST-T wave abnormality (T wave inversions and/or ST elevation or depression of > 0.05 mV), LVH: showing probable or definite left ventricular hypertrophy by Estes' criteria]
-    Normal: Normal ECG readings.
-    ST: Presence of ST-T wave abnormalities, indicating possible ischemia.
-    LVH: Signs of left ventricular hypertrophy, which can indicate increased cardiac workload.
-MaxHR: maximum heart rate achieved [Numeric value between 60 and 202]
-    Measure of cardiovascular fitness 
-ExerciseAngina: exercise-induced angina [Y: Yes, N: No]
-Oldpeak: oldpeak = ST [Numeric value measured in depression]
-ST_Slope: the slope of the peak exercise ST segment [Up: upsloping, Flat: flat, Down: downsloping]
-    Downsloping can provide insights into ischemic changes.
-HeartDisease: output class [1: heart disease, 0: Normal]
+# 🫀 Heart Disease Prediction Model
+This project uses a combined heart disease dataset to develop a predictive model for diagnosing the presence of heart disease based on clinical features. A Random Forest Classifier is trained and evaluated for performance using accuracy, precision, recall, F1, Confustion Matric. The results are further illustrated with data visualizations and analysis, supporting explainability and clinical insight.
 
 
-2. How can we explore the relationships between different variables?
-To perform regression analysis, we can fit a model to explore relationships between variables, visualize the data with scatter plots to identify patterns, and evaluate the model's statistics to assess significance, helping us understand how predictors influence the target variable.
+## ✅ Purpose & Overview
+The objective of this project is to:
+- Develop a machine learning model for predicting heart disease.
+- Identify significant predictors contributing to heart disease.
+- Provide intuitive visualizations through tools like Plotly Dash to support model interpretability for both technical and non-technical audiences.
 
-3. Are there any patterns or trends in the data that we can identify?
-The age distribution appears to be relatively normal, suggesting that the ages of the subjects are spread in a balanced manner around a central value.
-The majority of subjects are male, indicating a gender imbalance with more males than females in the dataset.
-The "ASY" (Atypical Angina) chest pain type is predominant among the subjects, meaning that this symptom is the most common chest pain classification in the dataset.
+A cleaned dataset combining five heart-related datasets serves as the input, and Random Forest Plot regression was chosen for data modeling. 
 
-4. Who is the intended audience?
+## Dataset Overview 
+The final dataset contains 918 unique patient records drawn from five publicly available sources:
 
-The intended audience for this analysis and code are data analysts, data scientists, medical researchers, or students interested in predictive modeling of heart disease. It could also be aimed at healthcare professionals exploring the relationships between patient features and heart disease risk. 
+| Dataset             | Observations |
+|---------------------|--------------|
+| Cleveland           | 303          |
+| Hungarian           | 294          |
+| Switzerland         | 123          |
+| Long Beach VA       | 200          |
+| Stalog (Heart)      | 270          |
 
-5. What is the question our analysis is trying to answer?
-We aim to understand the key features that contribute to heart disease risk and evaluate the predictive performance of the logistic regression model in classifying patients. 
+Source: [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/machine-learning-databases/heart-disease/)  
+Citation: *fedesoriano*, [Heart Failure Prediction Dataset (Kaggle)](https://www.kaggle.com/fedesoriano/heart-failure-prediction)
 
-6. Are there any specific libraries or frameworks that are well-suited to our project requirements?
 
-Yes, several libraries and frameworks are well-suited to this project focused on data analysis, feature exploration, and predictive modeling of heart disease:
+## 📊 Key Variables & Feature Descriptions
+| Column Name       | Description                                                                                  |
+|-------------------|----------------------------------------------------------------------------------------------|
+| Age               | Age of the patient (years)                                                                   |
+| Sex               | Gender (1 = Male, 0 = Female)                                                                |
+| ChestPainType     | One-hot encoded; Includes TA, ATA, NAP, and ASY (first category dropped)                     |
+| RestingBP         | Resting blood pressure (mm Hg)                                                               |
+| Cholesterol       | Serum cholesterol (mg/dl)                                                                    |
+| FastingBS         | Fasting blood sugar > 120 mg/dl (1 = Yes, 0 = No)                                            |
+| RestingECG        | Resting ECG results: 0 = Normal, 1 = ST Abnormality, 2 = LVH                                 |
+| MaxHR             | Maximum heart rate achieved                                                                  |
+| ExerciseAngina    | Exercise-induced angina (1 = Yes, 0 = No)                                                    |
+| Oldpeak           | ST depression induced by exercise compared to rest                                           |
+| ST_Slope          | Slope of the ST segment: 0 = Up, 1 = Flat, 2 = Down                                          |
+| HeartDisease      | Target variable (1 = Heart Disease, 0 = Normal) 
 
-pandas: For data manipulation and cleaning.
-seaborn and matplotlib: For data visualization and understanding feature distributions and relationships.
-scikit-learn (sklearn): For machine learning tasks including data splitting, model training (like logistic regression), evaluation metrics, and feature importance analysis.
-numpy: For numerical operations, such as calculating absolute coefficients for feature importance.
+## Exploratory Data Analysis 
 
 
 
-DATA VISUALIZATION
+## 🧪 Model Development
 
-1. What are the main goals and objectives of our visualization project?
+The model selection process follows these steps: 
 
-Explore Data Distributions: Visualize the distribution of key variables such as age, gender, and chest pain type to understand their patterns and prevalence within the dataset.
+1. **Data Cleaning & Feature Encoding**: Categorical values are encoded using mapping and one-hot encoding.  
+2. **Scaling**: Features are standardized using `StandardScaler` for model fitting.  
+3. **Train-Test Split**: Data is split into train (80%) and test (20%) sets with stratification.  
+4. **Model Training**: A `LogisticRegression` model is used in a `Pipeline`.  
+5. **Hyperparameter Tuning**: Performed using `GridSearchCV` with 5-fold cross-validation.
 
-Identify Relationships Between Variables: Use boxplots and other visualizations to examine how predictor variables like age and resting blood pressure relate to the presence of heart disease.
 
-Highlight Feature Importance:  Show the impact of different predictor variables on heart disease risk through visualizations of the logistic regression coefficients. 
+### Optimal Parameters Used 
 
-2. How can we tailor the visualization to effectively communicate with our audience?
 
-Use Clear and Simple Visuals: Choose straightforward plots (e.g., bar charts, boxplots) that clearly illustrate the relationships and distributions without unnecessary complexity.
+## 📈 Model Evaluation
 
-Choose High-Contrast Color Schemes:  Use color palettes that are distinguishable for color-blind users, such as ColorBrewer schemes (e.g., "Set2" or "Dark2"). Avoid relying solely on color to convey important information; include patterns or labels as well.
 
-Label Clearly and Consistently: Ensure all axes, legends, and titles are descriptive and easy to read. Use large, legible font sizes and clear labels to improve readability.
+- **Confusion Matrix**:
 
-Include Descriptive Titles and Annotations:  Add contextual information directly on the visualizations to guide interpretation, especially for viewers unfamiliar with the data.
+  |               | Predicted 0 | Predicted 1 |
+  |---------------|-------------|-------------|
+  | Actual 0      |     68      |     14      |
+  | Actual 1      |     8       |     94      |
 
-Ensure Accessibility of Digital Formats: When sharing reports or dashboards, use accessible formats like HTML or PDF with selectable text.
+- **Classification Report**:
 
-3. What type of visualization best suits our data and objectives (e.g., bar chart, scatter plot, heatmap)?
-4. How can we iterate on our design to address feedback and make iterative improvements?
-5. What best practices can we follow to promote inclusivity and diversity in our visualization design?
-6. How can we ensure that our visualization accurately represents the underlying data without misleading or misinterpreting information?
-7. Are there any privacy concerns or sensitive information that need to be addressed in our visualization?
+| Class | Precision | Recall | F1-Score | Support |
+|-------|-----------|--------|----------|---------|
+|   0   |   0.89    |  0.83  |   0.86   |   82    |
+|   1   |   0.87    |  0.92  |   0.90   |  102    |
+| Avg   |   0.88    |  0.88  |   0.88   |  184    |
+
+## 🔍 Exploratory Data Analysis
+
+Key trends and insights:
+- **Age**: Normally distributed across the population.  
+- **Sex Distribution**: Majority male, indicating gender imbalance.  
+- **Chest Pain Type**: Most common is 'ASY' (Asymptomatic).  
+- **Feature Correlation**: Oldpeak and ST_Slope show notable associations with heart disease.
+
+## 🧠 Feature Importance
+
+
+Planned visualizations:
+- Bar chart of absolute logistic regression coefficients  
+- Heatmap showing correlations among features  
+- Boxplots comparing key variables across disease status groups
+
+## 🎨 Data Visualization Objectives
+
+1. **Explore Data Distributions**  
+   - Age, sex, chest pain by disease outcome
+
+2. **Examine Feature Relationships**  
+   - Boxplots (e.g., Oldpeak vs HeartDisease)  
+   - Correlation heatmap
+
+3. **Showcase Feature Importance**  
+   - Bar chart of logistic regression coefficients  
+   - Interactive dashboard using Plotly Dash
+
+## 🎯 Audience
+
+This project is designed for:
+- **Data scientists & analysts** in healthcare  
+- **Medical researchers** and healthcare professionals  
+- **Machine learning students**  
+- Anyone interested in clinical decision support tools
+
+## 📚 Tech Stack & Libraries
+
+| Library        | Purpose                                  |
+|----------------|------------------------------------------|
+| `pandas`       | Data manipulation                        |
+| `numpy`        | Numerical computations                   |
+| `seaborn`, `matplotlib` | Data visualization                 |
+| `scikit-learn` | Modeling, evaluation, hyperparameter tuning |
+| `Plotly Dash`  | (Optional) Interactive data visualization |
+
+## Ethical Considerations
+
+- The dataset is anonymized, posing low privacy risks.  
+- Ensure visualizations are inclusive (colorblind-friendly palettes, clear labeling).  
+- Communicate model limitations and avoid overreliance in a real-world clinical setting.
+
+## Future Enhancements
+
+- Implement more complex models such as Random Forest or XGBoost for comparison.  
+- Deploy a real-time prediction interface using Streamlit or Dash.  
+- Perform feature selection or dimensionality reduction using PCA or Lasso.
+
+## References
+
+- **UCI Datasets**: https://archive.ics.uci.edu/ml/machine-learning-databases/heart-disease/  
+- **Kaggle Dataset (Fedesoriano)**: https://www.kaggle.com/fedesoriano/heart-failure-prediction
+
+## Links to Individual Recordings 
+
+- Anup Pillai 
+- Fatema Banihashem 
+- Mohd Tazim Ishraque 
+- Khoren Avetisyan 
+- Khrystyna Platko 
