@@ -9,7 +9,7 @@ This project uses a combined heart disease dataset to develop a predictive model
 The objective of this project is to:
 - Develop a machine learning model for predicting heart disease.
 - Identify significant predictors contributing to heart disease.
-- Provide intuitive visualizations through tools like Plotly Dash to support model interpretability for both technical and non-technical audiences.
+- Provide intuitive visualizations to support model interpretability for both technical and non-technical audiences.
 
 A cleaned dataset combining five heart-related datasets serves as the input, and Random Forest Plot regression was chosen for data modeling. 
 
@@ -46,13 +46,17 @@ Citation: *fedesoriano*, [Heart Failure Prediction Dataset (Kaggle)](https://www
 
 ## Exploratory Data Analysis 
 
-![Summary of age and gender influence on heart disease] (Figures /Age vs Heart Disease and Heart Disease vs. Gender .png)
+![Summary of age and gender influence on heart disease] (figures/Age vs Heart Disease and Heart Disease vs. Gender .png)
 
 The figure contains two subplots analyzing the relationships between age, gender, and heart disease. The first subplot, **Age vs Heart Disease Distribution**, presents a histogram illustrating the counts of individuals with and without heart disease across different age groups. It shows that people without heart disease (blue bars) are fairly evenly distributed across ages, with some peaks around ages 48 and 55. In contrast, individuals with heart disease (orange bars) tend to be concentrated in the middle age range, particularly between ages 50 and 60, with a peak around age 55. This indicates that the occurrence of heart disease generally increases with age, especially in the 50-60 age bracket. The second subplot, **Heart Disease vs Gender**, highlights that males (represented by '1') have a significantly higher count of heart disease cases—458—compared to females, who have only 50 cases. Males without heart disease number 143, suggesting a higher prevalence of heart disease among males in this dataset. Overall, the data suggests that heart disease prevalence rises with age and is more common in males than females.
 
 
-This visualization aids in understanding the relationship between age and the occurrence of heart disease, suggesting the importance of age as a factor in medical assessments and preventive strategies.
+![Cholesterol Distribution by Gender and Patient Group] (figures/cholesterol-male-vs-female-mti.png)
 
+The top left plot displays the density and distribution of cholesterol levels for male patients, with the accompanying histogram illustrating the frequency of specific cholesterol values. In the top right plot, a similar density and histogram representation is provided for another subgroup of male patients, highlighting potential variations within this group. The bottom left plot shows the cholesterol distribution for female patients, with a pink-shaded histogram overlay indicating the spread of cholesterol levels within this group. Lastly, the bottom right plot presents the density and histogram of cholesterol levels for female patients, emphasizing differences compared to the male groups. The use of light blue and pink shades helps differentiate between the various patient groups or categories within the dataset.
+
+
+! [Resting BP distribution by Gender and Patient Group] (figures/resting-bp-male-vs-female-mti.png)
 
 
 ## 🧪 Model Development
@@ -65,8 +69,6 @@ The model selection process follows these steps:
 4. **Model Training**: A `LogisticRegression` model is used in a `Pipeline`.  
 5. **Hyperparameter Tuning**: Performed using `GridSearchCV` with 5-fold cross-validation.
 
-
-### Optimal Parameters Used 
 
 
 ## 📈 Model Evaluation
@@ -83,11 +85,11 @@ The model selection process follows these steps:
 
 | Metric    | Value |
 |-----------|-------|
-| Accuracy  | 0.875 |
-| Precision | 0.896 |
-| Recall    | 0.888 |
-| F1 Score  | 0.892 |
-| ROC AUC   | 0.936 |
+| Accuracy  | 0.870 |
+| Precision | 0.875 |
+| Recall    | 0.892 |
+| F1 Score  | 0.883 |
+| ROC AUC   | 0.931 |
 
 ## 🔍 Exploratory Data Analysis
 
@@ -99,9 +101,8 @@ Key trends and insights:
 
 ## 🧠 Feature Importance
 
-
 Planned visualizations:
-- Bar chart of absolute logistic regression coefficients  
+- Bar graph visualization for basic statistical analysis   
 - Heatmap showing correlations among features  
 - Boxplots comparing key variables across disease status groups
 
@@ -159,4 +160,4 @@ This project is designed for:
 - Fatema Banihashem 
 - Mohd Tazim Ishraque 
 - Khoren Avetisyan 
-- Khrystyna Platko 
+- Khrystyna Platko 1 
