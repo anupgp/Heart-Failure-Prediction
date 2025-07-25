@@ -1,3 +1,4 @@
+
 # Data Science Team 2 
 
 # 🫀 Heart Disease Prediction Model
@@ -45,6 +46,13 @@ Citation: *fedesoriano*, [Heart Failure Prediction Dataset (Kaggle)](https://www
 
 ## Exploratory Data Analysis 
 
+![Summary of age and gender influence on heart disease] (Figures /Age vs Heart Disease and Heart Disease vs. Gender .png)
+
+The figure contains two subplots analyzing the relationships between age, gender, and heart disease. The first subplot, **Age vs Heart Disease Distribution**, presents a histogram illustrating the counts of individuals with and without heart disease across different age groups. It shows that people without heart disease (blue bars) are fairly evenly distributed across ages, with some peaks around ages 48 and 55. In contrast, individuals with heart disease (orange bars) tend to be concentrated in the middle age range, particularly between ages 50 and 60, with a peak around age 55. This indicates that the occurrence of heart disease generally increases with age, especially in the 50-60 age bracket. The second subplot, **Heart Disease vs Gender**, highlights that males (represented by '1') have a significantly higher count of heart disease cases—458—compared to females, who have only 50 cases. Males without heart disease number 143, suggesting a higher prevalence of heart disease among males in this dataset. Overall, the data suggests that heart disease prevalence rises with age and is more common in males than females.
+
+
+This visualization aids in understanding the relationship between age and the occurrence of heart disease, suggesting the importance of age as a factor in medical assessments and preventive strategies.
+
 
 
 ## 🧪 Model Development
@@ -73,11 +81,13 @@ The model selection process follows these steps:
 
 - **Classification Report**:
 
-| Class | Precision | Recall | F1-Score | Support |
-|-------|-----------|--------|----------|---------|
-|   0   |   0.89    |  0.83  |   0.86   |   82    |
-|   1   |   0.87    |  0.92  |   0.90   |  102    |
-| Avg   |   0.88    |  0.88  |   0.88   |  184    |
+| Metric    | Value |
+|-----------|-------|
+| Accuracy  | 0.875 |
+| Precision | 0.896 |
+| Recall    | 0.888 |
+| F1 Score  | 0.892 |
+| ROC AUC   | 0.936 |
 
 ## 🔍 Exploratory Data Analysis
 
