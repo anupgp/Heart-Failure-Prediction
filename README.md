@@ -1,3 +1,4 @@
+
 # Data Science Team 2 
 
 # 🫀 Heart Disease Prediction Model
@@ -45,6 +46,27 @@ Citation: *fedesoriano*, [Heart Failure Prediction Dataset (Kaggle)](https://www
 
 ## Exploratory Data Analysis 
 
+![Heart Disease Age Distribution](/Users/khrystynaplatko/Desktop/Heart-Failure-Prediction/Figures/Screenshot%202025-07-24%20at%207.13.59%20PM.png)
+
+This histogram illustrates the age distribution of individuals diagnosed with and without heart disease. The data is categorized into two groups: those with heart disease (indicated in blue) and those without (indicated in red).
+
+1. **Age Peaks**:
+   - Individuals with heart disease primarily fall within the age range of around 60 years, showcasing a peak in this demographic.
+   - Conversely, individuals without heart disease tend to cluster around the 50-year mark.
+
+2. **Age Spread**:
+   - The distribution for those with heart disease is broader, extending into the older age groups more prominently than those without.
+   - The distribution for those without heart disease is slightly more compact, with fewer older individuals.
+
+3. **Comparative Density**:
+   - Higher density of older individuals (between 50 to 70 years) is observed in the blue group (with heart disease).
+   - Younger individuals (under 50 years) are more prevalent in the red group (without heart disease).
+
+4. **Implications**:
+   - The data suggests a correlation between age and the prevalence of heart disease, highlighting that the risk increases with age.
+
+This visualization aids in understanding the relationship between age and the occurrence of heart disease, suggesting the importance of age as a factor in medical assessments and preventive strategies.
+
 
 
 ## 🧪 Model Development
@@ -73,11 +95,13 @@ The model selection process follows these steps:
 
 - **Classification Report**:
 
-| Class | Precision | Recall | F1-Score | Support |
-|-------|-----------|--------|----------|---------|
-|   0   |   0.89    |  0.83  |   0.86   |   82    |
-|   1   |   0.87    |  0.92  |   0.90   |  102    |
-| Avg   |   0.88    |  0.88  |   0.88   |  184    |
+| Metric    | Value |
+|-----------|-------|
+| Accuracy  | 0.875 |
+| Precision | 0.896 |
+| Recall    | 0.888 |
+| F1 Score  | 0.892 |
+| ROC AUC   | 0.936 |
 
 ## 🔍 Exploratory Data Analysis
 
