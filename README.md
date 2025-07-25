@@ -67,7 +67,7 @@ The model selection process follows these steps:
 2. **Scaling**: Features are standardized using `StandardScaler` for model fitting.  
 3. **Train-Test Split**: Data is split into train (80%) and test (20%) sets with stratification.  
 4. **Model Training**: A `LogisticRegression` model is used in a `Pipeline`.  
-5. **Hyperparameter Tuning**: Performed using `GridSearchCV` with 5-fold cross-validation.
+5. **Hyperparameter Tuning**: Performed using `GridSearchCV` with 5-fold cross-validation
 
 
 
