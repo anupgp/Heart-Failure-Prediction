@@ -3,6 +3,7 @@
 # 🫀 Heart Disease Prediction Model
 This project uses a combined heart disease dataset to develop a predictive model for diagnosing the presence of heart disease based on clinical features. A Random Forest Classifier is trained and evaluated for performance using accuracy, precision, recall, F1, Confustion Matric. The results are further illustrated with data visualizations and analysis, supporting explainability and clinical insight.
 
+
 ## ✅ Purpose & Overview
 The objective of this project is to:
 - Develop a machine learning model for predicting heart disease.
@@ -44,28 +45,7 @@ Citation: *fedesoriano*, [Heart Failure Prediction Dataset (Kaggle)](https://www
 
 ## Exploratory Data Analysis 
 
-A cleaned dataset combining five heart-related datasets serves as the input, and Random Forest Plot regression was chosen for data modeling. 
-
-## Dataset Overview 
-The final dataset contains 918 unique patient records drawn from five publicly available sources:
-
-| Dataset             | Observations |
-|---------------------|--------------|
-| Cleveland           | 303          |
-| Hungarian           | 294          |
-| Switzerland         | 123          |
-| Long Beach VA       | 200          |
-| Stalog (Heart)      | 270          |
-
-Source: [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/machine-learning-databases/heart-disease/)  
-Citation: *fedesoriano*, [Heart Failure Prediction Dataset (Kaggle)](https://www.kaggle.com/fedesoriano/heart-failure-prediction)
-
-
-## Exploratory Data Analysis 
-
-
 ![Heart Disease Age Distribution](/Users/khrystynaplatko/Desktop/Heart-Failure-Prediction/Figures/Screenshot%202025-07-24%20at%207.13.59%20PM.png)
-
 
 This histogram illustrates the age distribution of individuals diagnosed with and without heart disease. The data is categorized into two groups: those with heart disease (indicated in blue) and those without (indicated in red).
 
@@ -122,19 +102,7 @@ The model selection process follows these steps:
 | F1 Score  | 0.892 |
 | ROC AUC   | 0.936 |
 
-## 🧪 Model Development
-
-The model selection process follows these steps: 
-
-1. **Data Cleaning & Feature Encoding**: Categorical values are encoded using mapping and one-hot encoding.  
-2. **Scaling**: Features are standardized using `StandardScaler` for model fitting.  
-3. **Train-Test Split**: Data is split into train (80%) and test (20%) sets with stratification.  
-4. **Model Training**: A `LogisticRegression` model is used in a `Pipeline`.  
-5. **Hyperparameter Tuning**: Performed using `GridSearchCV` with 5-fold cross-validation.
-
-
-
-
+## 🔍 Exploratory Data Analysis
 
 Key trends and insights:
 - **Age**: Normally distributed across the population.  
@@ -143,6 +111,7 @@ Key trends and insights:
 - **Feature Correlation**: Oldpeak and ST_Slope show notable associations with heart disease.
 
 ## 🧠 Feature Importance
+
 
 Planned visualizations:
 - Bar chart of absolute logistic regression coefficients  
@@ -188,7 +157,7 @@ This project is designed for:
 
 ## Future Enhancements
 
-- Implement more complex models such as XGBoost for comparison.  
+- Implement more complex models such as Random Forest or XGBoost for comparison.  
 - Deploy a real-time prediction interface using Streamlit or Dash.  
 - Perform feature selection or dimensionality reduction using PCA or Lasso.
 
@@ -204,3 +173,4 @@ This project is designed for:
 - Mohd Tazim Ishraque 
 - Khoren Avetisyan 
 - Khrystyna Platko 
+
