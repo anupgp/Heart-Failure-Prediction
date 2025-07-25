@@ -135,7 +135,7 @@ This project is designed for:
 | `numpy`        | Numerical computations                   |
 | `seaborn`, `matplotlib` | Data visualization                 |
 | `scikit-learn` | Modeling, evaluation, hyperparameter tuning |
-| `Plotly Dash`  | (Optional) Interactive data visualization |
+
 
 ## Ethical Considerations
 
