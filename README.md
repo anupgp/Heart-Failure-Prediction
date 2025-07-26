@@ -99,6 +99,15 @@ Key trends and insights:
 - **Chest Pain Type**: Most common is 'ASY' (Asymptomatic).  
 - **Feature Correlation**: Oldpeak and ST_Slope show notable associations with heart disease.
 
+Additional Observations:
+
+- Among males, the number of heart disease patients is higher than those without. Conversely, in the female population, there are more individuals without heart disease than with it.
+- The presence of asymptomatic (ASY) chest pain is strongly associated with a higher likelihood of heart disease.
+- Fasting blood sugar levels are not definitive indicators—patients with both elevated and normal fasting blood sugar levels show notable cases of heart disease.
+- Resting ECG results do not provide a clear distinction; all three categories exhibit a substantial number of heart disease cases.
+- The presence of exercise-induced angina significantly increases the probability of heart disease diagnosis.
+- A flat ST_Slope slope is highly indicative of heart disease. A downward slope also correlates with heart disease, though it appears in fewer cases.
+
 ## 🧠 Feature Importance
 
 Planned visualizations:
