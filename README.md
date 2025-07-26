@@ -168,5 +168,5 @@ This project is designed for:
 - Anup Pillai 
 - Fatema Banihashem: https://drive.google.com/file/d/15tCy0BHCf7bzGrJJotcthEZ9cw2JETjJ/view?usp=drive_link 
 - Mohd Tazim Ishraque 
-- Khoren Avetisyan 
+- Khoren Avetisyan: https://youtu.be/B08OiPVSZCQ?si=qcTXIZXK503rFpyg 
 - Khrystyna Platko 1 
