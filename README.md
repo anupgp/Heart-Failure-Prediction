@@ -88,7 +88,6 @@ Key trends and insights:
 - **Feature Correlation**: Oldpeak and ST_Slope show notable associations with heart disease.
 
 ## 🧠 Feature Importance
-<img width="1990" height="790" alt="Image" src="https://github.com/user-attachments/assets/a88c03e1-5b7a-4f69-a14e-44388bb49a5a" />
 
 Planned visualizations:
 - Bar chart of absolute logistic regression coefficients  
