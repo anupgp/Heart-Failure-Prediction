@@ -2,7 +2,7 @@
 # Data Science Team 2 
 
 # 🫀 Heart Disease Prediction Model
-This project uses a combined heart disease dataset to develop a predictive model for diagnosing the presence of heart disease based on clinical features. A Random Forest Classifier is trained and evaluated for performance using accuracy, precision, recall, F1, Confustion Matric. The results are further illustrated with data visualizations and analysis, supporting explainability and clinical insight.
+This project uses a combined heart disease dataset to develop a predictive model for diagnosing the presence of heart disease based on clinical features. A Random Forest Classifier is trained and evaluated for performance using accuracy, precision, recall, F1, Confusion Matric. The results are further illustrated with data visualizations and analysis, supporting explainability and clinical insight.
 
 
 ## ✅ Purpose & Overview
