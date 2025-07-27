@@ -185,4 +185,4 @@ This project is designed for:
 - Fatema Banihashem: https://drive.google.com/file/d/15tCy0BHCf7bzGrJJotcthEZ9cw2JETjJ/view?usp=drive_link 
 - Mohd Tazim Ishraque 
 - Khoren Avetisyan: https://youtu.be/B08OiPVSZCQ?si=qcTXIZXK503rFpyg 
-- Khrystyna Platko 1 
+- Khrystyna Platko: https://drive.google.com/file/d/1w0DnnJvaBip1ALvssbab3B6baqYcW73H/view?usp=sharing  
