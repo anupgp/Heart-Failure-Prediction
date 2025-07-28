@@ -128,7 +128,8 @@ The high Accuracy indicates that the model correctly predicts most instances ove
 ## 🧠 Data Visualization
 
 Developed Visualizations:
-- Bar graph visualization for basic statistical analysis   
+- Bar graph visualization for basic statistical analysis
+- Pie chart visualization for basic statistical analysis   
 - Heatmap showing correlations among features  
 - Boxplots comparing key variables across disease status groups
 
