@@ -127,10 +127,14 @@ The high Accuracy indicates that the model correctly predicts most instances ove
 
 ## 🧠 Data Visualization
 
-Planned visualizations:
+Developed Visualizations:
 - Bar graph visualization for basic statistical analysis   
 - Heatmap showing correlations among features  
 - Boxplots comparing key variables across disease status groups
+
+https://github.com/anupgp/Heart-Failure-Prediction/tree/main/figures
+<img width="1089" height="813" alt="Image" src="https://github.com/user-attachments/assets/4111b31c-cd60-4dbf-8c0b-9558ad679978" />
+
 
 ## 🎨 Data Visualization Objectives
 
