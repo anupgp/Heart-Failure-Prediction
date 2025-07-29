@@ -74,7 +74,8 @@ The top left plot displays the density and distribution of cholesterol levels fo
 
 The top left plot illustrates the distribution and density of resting blood pressure (measured in mm Hg) for male patients, with a histogram showing the frequency of specific blood pressure values. The overlaid density curve highlights the overall trend and spread within this group. The top right plot provides a similar visualization for another subgroup of male patients, revealing potential differences or similarities in blood pressure distribution compared to the first group. Moving to the bottom left plot, it depicts the blood pressure distribution for female patients, with a pink-shaded histogram emphasizing the range and frequency of values within this group. The bottom right plot presents the density and histogram of resting blood pressure for a different female subgroup, highlighting variations in blood pressure levels when compared to the other female group. The use of light blue shades in the male plots and pink shades in the female plots aids in distinguishing between the different patient categories.The observed differences in blood pressure distributions between male and female patients, as well as within subgroups of each gender, suggest underlying variations that may be influenced by demographic or health-related factors, warranting further investigation into their clinical significance.
 
-
+**Figure 4.**
+<img width="1238" height="1238" alt="Image" src="https://github.com/user-attachments/assets/246053b5-9615-4c83-9895-345a0b46eca6" />
 ### Additional Observations:
 
 - Among males, the number of heart disease patients is higher than those without. Conversely, in the female population, there are more individuals without heart disease than with it.
@@ -95,7 +96,7 @@ The model selection process follows these steps:
 4. **Model Training**: A `Random Forest` model is used in a `Pipeline`.  
 
 
-**Figure 4.**
+**Figure 5.**
 ![Random Forest Pipeline](./figures/Khor_figures/Random_Forest_Pipeline_Khoren.png)  
 
 The figure illustrates the pipeline for a Random Forest classification model. The pipeline begins with a preprocessing step using a ColumnTransformer, which comprises two main feature engineering components: a SimpleImputer with a median strategy, applied to handle missing values for numerical features such as 'Age', 'RestingBP', 'Cholesterol', etc., and another SimpleImputer with the most frequent strategy for categorical features like 'Sex', 'ChestPainType', 'RestingECG', etc. The imputed numerical data is then scaled using a StandardScaler to normalize the feature distributions. Subsequently, the processed features are fed into a OneHotEncoder for categorical variables, which handles transformation by creating binary dummy variables, with unknown categories ignored. Finally, the processed data is classified using a RandomForestClassifier, configured with a specified random_state to ensure reproducibility of results. 
