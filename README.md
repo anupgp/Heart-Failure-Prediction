@@ -54,16 +54,17 @@ Citation: *fedesoriano*, [Heart Failure Prediction Dataset (Kaggle)](https://www
 - **Feature Correlation**: Oldpeak and ST_Slope show notable associations with heart disease.
 
 
-
+**Figure 1.**
 ![Summary of age and gender influence on heart disease](./figures/Age_vs_Heart_Disease_and_Heart_Disease_vs_Gender.png)
 
 The figure contains two subplots analyzing the relationships between age, gender, and heart disease. The first subplot, **Age vs Heart Disease Distribution**, presents a histogram illustrating the counts of individuals with and without heart disease across different age groups. It shows that people without heart disease (blue bars) are fairly evenly distributed across ages, with some peaks around ages 48 and 55. In contrast, individuals with heart disease (orange bars) tend to be concentrated in the middle age range, particularly between ages 50 and 60, with a peak around age 55. This indicates that the occurrence of heart disease generally increases with age, especially in the 50-60 age bracket. The second subplot, **Heart Disease vs Gender**, highlights that males (represented by '1') have a significantly higher count of heart disease cases—458—compared to females, who have only 50 cases. Males without heart disease number 143, suggesting a higher prevalence of heart disease among males in this dataset. Overall, the data suggests that heart disease prevalence rises with age and is more common in males than females.
 
+**Figure 2.**
 <img width="1651" height="1007" alt="Image" src="https://github.com/user-attachments/assets/d7c0e6e3-ecc0-4091-be01-c729be28970b" />
 
 The top left plot displays the density and distribution of cholesterol levels for male patients, with the accompanying histogram illustrating the frequency of specific cholesterol values. In the top right plot, a similar density and histogram representation is provided for another subgroup of male patients, highlighting potential variations within this group. The bottom left plot shows the cholesterol distribution for female patients, with a pink-shaded histogram overlay indicating the spread of cholesterol levels within this group. Lastly, the bottom right plot presents the density and histogram of cholesterol levels for female patients, emphasizing differences compared to the male groups. The use of light blue and pink shades helps differentiate between the various patient groups or categories within the dataset.
 
-
+**Figure 3.**
 <img width="1630" height="1007" alt="Image" src="https://github.com/user-attachments/assets/dcc6ab03-3dc5-4646-a0c0-9f90739e6a96" />
 
 The top left plot illustrates the distribution and density of resting blood pressure (measured in mm Hg) for male patients, with a histogram showing the frequency of specific blood pressure values. The overlaid density curve highlights the overall trend and spread within this group. The top right plot provides a similar visualization for another subgroup of male patients, revealing potential differences or similarities in blood pressure distribution compared to the first group. Moving to the bottom left plot, it depicts the blood pressure distribution for female patients, with a pink-shaded histogram emphasizing the range and frequency of values within this group. The bottom right plot presents the density and histogram of resting blood pressure for a different female subgroup, highlighting variations in blood pressure levels when compared to the other female group. The use of light blue shades in the male plots and pink shades in the female plots aids in distinguishing between the different patient categories.The observed differences in blood pressure distributions between male and female patients, as well as within subgroups of each gender, suggest underlying variations that may be influenced by demographic or health-related factors, warranting further investigation into their clinical significance.
@@ -88,7 +89,7 @@ The model selection process follows these steps:
 4. **Model Training**: A `Random Forest` model is used in a `Pipeline`.  
 
 
-
+**Figure 4.**
 ![Random Forest Pipeline](./figures/Khor_figures/Random_Forest_Pipeline_Khoren.png)  
 
 The figure illustrates the pipeline for a Random Forest classification model. The pipeline begins with a preprocessing step using a ColumnTransformer, which comprises two main feature engineering components: a SimpleImputer with a median strategy, applied to handle missing values for numerical features such as 'Age', 'RestingBP', 'Cholesterol', etc., and another SimpleImputer with the most frequent strategy for categorical features like 'Sex', 'ChestPainType', 'RestingECG', etc. The imputed numerical data is then scaled using a StandardScaler to normalize the feature distributions. Subsequently, the processed features are fed into a OneHotEncoder for categorical variables, which handles transformation by creating binary dummy variables, with unknown categories ignored. Finally, the processed data is classified using a RandomForestClassifier, configured with a specified random_state to ensure reproducibility of results. 
